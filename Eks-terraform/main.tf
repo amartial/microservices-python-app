@@ -100,3 +100,8 @@ resource "aws_eks_node_group" "example" {
     aws_iam_role_policy_attachment.example-AmazonEC2ContainerRegistryReadOnly,
   ]
 }
+
+output "cluster_id" {
+  value = aws_eks_node_group.example.id
+}
+
